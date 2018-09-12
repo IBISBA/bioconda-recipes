@@ -1,10 +1,10 @@
 about:
   home: https://github.com/brsynth/rp2paths
   license: MIT
-  summary: RP2paths extracts the set of pathways that lies in a metabolic space file outputed by the RetroPath2.0 workflow.
+  summary: rp2paths extracts the set of pathways that lies in a metabolic space file outputed by the RetroPath2.0 workflow.
 
 package:
-  name: RP2paths
+  name: rp2paths
   version: 1.0.0
 
 build:
@@ -17,7 +17,7 @@ source:
 
 requirements:
   run:
-    - python >= 3.6
+    - python >=3.6
     - certifi=2018.4.16=py35_0
     - graphviz=2.40.1=h25d223c_0
     - intel-openmp=2018.0.3=0
@@ -91,6 +91,10 @@ requirements:
     - zlib=1.2.11=h470a237_3
     - rdkit=2018.03.3.0=py35h6bb024c_1
 
+test:
+  commands:
+    - rp2paths --help > /dev/null
+
 extra:
   identifiers:
-    - doi.org/10.1016/j.ymben.2017.12.002
+    - doi:10.1016/j.ymben.2017.12.002
